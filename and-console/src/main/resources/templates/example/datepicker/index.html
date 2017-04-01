@@ -1,0 +1,53 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+	<form class="form-horizontal">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="control-label col-md-4">呼叫时间</label>
+					<div class="col-md-8">
+						<div class="input-group date default-datepicker3">
+							<input name="" type="text" class="form-control"
+								readonly="readonly">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="control-label col-md-3">处理时间</label>
+					<div class="col-md-9">
+						<div
+							class="input-group input-daterange default-datepicker3-daterange">
+							<input type="text" class="form-control" readonly="readonly">
+							<!--  -->
+							<span class="input-group-addon">~</span>
+							<!--  -->
+							<input type="text" class="form-control" readonly="readonly">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<button type="button" id="datePickerTestBtn" class="btn btn-primary">测试按钮</button>
+			</div>
+
+		</div>
+	</form>
+	<script th:src="@{/static/extensions/datepicker3_extension.js}"
+		type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+		    $("#datePickerTestBtn").click(function(){
+// 		        $(".default-datepicker3").datepicker("update", "1999-12-31");
+		        $(".default-datepicker3").datepicker("setDate", new Date());
+		    });
+		});
+	</script>
+	<th:block th:></th:block>
+
+</th:block>

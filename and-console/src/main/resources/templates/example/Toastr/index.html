@@ -1,0 +1,280 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-bubble font-green-sharp"></i> <span
+						class="caption-subject font-green-sharp sbold">Toastr
+						Notification Demo</span>
+				</div>
+				<div class="actions">
+					<div class="btn-group">
+						<a class="btn green-haze btn-outline btn-circle btn-sm"
+							href="javascript:;" data-toggle="dropdown" data-hover="dropdown"
+							data-close-others="true"> Actions <i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu pull-right">
+							<li><a href="javascript:;"> Option 1</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:;">Option 2</a></li>
+							<li><a href="javascript:;">Option 3</a></li>
+							<li><a href="javascript:;">Option 4</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="form-group">
+							<label class="control-label" for="title">Title</label> <input
+								id="title" type="text" class="form-control"
+								value="Toastr Notifications" placeholder="Enter a title ..." />
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="message">Message</label>
+							<textarea class="form-control" id="message" rows="3"
+								placeholder="Enter a message ...">Gnome &amp; Growl type non-blocking notifications</textarea>
+						</div>
+						<div class="form-group">
+							<div class="mt-checkbox-list">
+								<label class="mt-checkbox mt-checkbox-outline" for="closeButton">
+									<input id="closeButton" type="checkbox" value="checked" checked
+									class="input-small" />Close Button <span></span>
+								</label> <label class="mt-checkbox mt-checkbox-outline"
+									for="addBehaviorOnToastClick"> <input
+									id="addBehaviorOnToastClick" type="checkbox" value="checked"
+									class="input-small" />Add behavior on toast click <span></span>
+								</label> <label class="mt-checkbox mt-checkbox-outline" for="debugInfo">
+									<input id="debugInfo" type="checkbox" value="checked"
+									class="input-small" />Debug <span></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group" id="toastTypeGroup">
+							<label>Toast Type</label>
+							<div class="mt-radio-list">
+								<label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="toasts" value="success" checked />Success <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="toasts" value="info" />Info <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="toasts" value="warning" />Warning <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="toasts" value="error" />Error <span></span>
+								</label>
+							</div>
+						</div>
+						<div class="form-group" id="positionGroup">
+							<label>Position</label>
+							<div class="mt-radio-list">
+								<label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="positions" value="toast-top-right" checked />Top
+									Right <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="positions" value="toast-bottom-right" />Bottom
+									Right <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="positions" value="toast-bottom-left" />Bottom
+									Left <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="positions" value="toast-top-left" />Top
+									Left <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="positions" value="toast-top-center" />Top
+									Center <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="positions" value="toast-bottom-center" />Bottom
+									Center <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="positions" value="toast-top-full-width" />Top
+									Full Width <span></span>
+								</label> <label class="mt-radio mt-radio-outline"> <input
+									type="radio" name="positions" value="toast-bottom-full-width" />Bottom
+									Full Width <span></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<div class="controls">
+								<label class="control-label" for="showEasing">Show
+									Easing</label> <input id="showEasing" type="text"
+									placeholder="swing, linear" class="form-control input-small"
+									value="swing" /> <label class="control-label" for="hideEasing">Hide
+									Easing</label> <input id="hideEasing" type="text"
+									placeholder="swing, linear" class="form-control input-small"
+									value="linear" /> <label class="control-label"
+									for="showMethod">Show Method</label> <input id="showMethod"
+									type="text" placeholder="show, fadeIn, slideDown"
+									class="form-control input-small" value="fadeIn" /> <label
+									class="control-label" for="hideMethod">Hide Method</label> <input
+									id="hideMethod" type="text"
+									placeholder="hide, fadeOut, slideUp"
+									class="form-control input-small" value="fadeOut" />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="form-group">
+							<div class="controls">
+								<label class="control-label" for="showDuration">Show
+									Duration</label> <input id="showDuration" type="text" placeholder="ms"
+									class="form-control input-small" value="1000" /> <label
+									class="control-label" for="hideDuration">Hide Duration</label>
+								<input id="hideDuration" type="text" placeholder="ms"
+									class="form-control input-small" value="1000" /> <label
+									class="control-label" for="timeOut">Time out</label> <input
+									id="timeOut" type="text" placeholder="ms"
+									class="form-control input-small" value="5000" /> <label
+									class="control-label" for="timeOut">Extended time out</label> <input
+									id="extendedTimeOut" type="text" placeholder="ms"
+									class="form-control input-small" value="1000" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<button type="button" class="btn green" id="showtoast">Show
+							Toast</button>
+						<button type="button" class="btn btn-outline dark"
+							id="cleartoasts">Clear Toasts</button>
+						<button type="button" class="btn btn-outline dark"
+							id="clearlasttoast">Clear Last Toast</button>
+					</div>
+				</div>
+				<div class="row margin-top-30">
+					<div class="col-md-12">
+						<pre id='toastrOptions' class="well">Settings...
+						</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    var UIToastr = function() {
+
+        return {
+            //main function to initiate the module
+            init : function() {
+
+                var i = -1, toastCount = 0, $toastlast, getMessage = function() {
+                    var msgs = [
+                            'Hello, some notification sample goes here',
+                            '<div><input class="form-control input-small" value="textbox"/>&nbsp;<a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank">Check this out</a></div><div><button type="button" id="okBtn" class="btn blue">Close me</button><button type="button" id="surpriseBtn" class="btn default" style="margin: 0 8px 0 8px">Surprise me</button></div>',
+                            'Did you like this one ? :)', 'Totally Awesome!!!', 'Yeah, this is the Metronic!',
+                            'Explore the power of App. Purchase it now!' ];
+                    i++;
+                    if (i === msgs.length) {
+                        i = 0;
+                    }
+
+                    return msgs[i];
+                };
+
+                $('#showtoast').click(
+                        function() {
+                            var shortCutFunction = $("#toastTypeGroup input:checked").val();
+                            var msg = $('#message').val();
+                            var title = $('#title').val() || '';
+                            var $showDuration = $('#showDuration');
+                            var $hideDuration = $('#hideDuration');
+                            var $timeOut = $('#timeOut');
+                            var $extendedTimeOut = $('#extendedTimeOut');
+                            var $showEasing = $('#showEasing');
+                            var $hideEasing = $('#hideEasing');
+                            var $showMethod = $('#showMethod');
+                            var $hideMethod = $('#hideMethod');
+                            var toastIndex = toastCount++;
+
+                            toastr.options = {
+                                closeButton : $('#closeButton').prop('checked'),
+                                debug : $('#debugInfo').prop('checked'),
+                                positionClass : $('#positionGroup input:checked').val() || 'toast-top-right',
+                                onclick : null
+                            };
+
+                            if ($('#addBehaviorOnToastClick').prop('checked')) {
+                                toastr.options.onclick = function() {
+                                    alert('You can perform some custom action after a toast goes away');
+                                };
+                            }
+
+                            if ($showDuration.val().length) {
+                                toastr.options.showDuration = $showDuration.val();
+                            }
+
+                            if ($hideDuration.val().length) {
+                                toastr.options.hideDuration = $hideDuration.val();
+                            }
+
+                            if ($timeOut.val().length) {
+                                toastr.options.timeOut = $timeOut.val();
+                            }
+
+                            if ($extendedTimeOut.val().length) {
+                                toastr.options.extendedTimeOut = $extendedTimeOut.val();
+                            }
+
+                            if ($showEasing.val().length) {
+                                toastr.options.showEasing = $showEasing.val();
+                            }
+
+                            if ($hideEasing.val().length) {
+                                toastr.options.hideEasing = $hideEasing.val();
+                            }
+
+                            if ($showMethod.val().length) {
+                                toastr.options.showMethod = $showMethod.val();
+                            }
+
+                            if ($hideMethod.val().length) {
+                                toastr.options.hideMethod = $hideMethod.val();
+                            }
+
+                            if (!msg) {
+                                msg = getMessage();
+                            }
+
+                            $("#toastrOptions").text(
+                                    "Command: toastr[" + shortCutFunction + "](\"" + msg + (title ? "\", \"" + title : '')
+                                            + "\")\n\ntoastr.options = " + JSON.stringify(toastr.options, null, 2));
+
+                            var $toast = toastr[shortCutFunction](msg, title); // Wire up an event handler to a button in the toast, if it exists
+                            $toastlast = $toast;
+                            if ($toast.find('#okBtn').length) {
+                                $toast.delegate('#okBtn', 'click', function() {
+                                    alert('you clicked me. i was toast #' + toastIndex + '. goodbye!');
+                                    $toast.remove();
+                                });
+                            }
+                            if ($toast.find('#surpriseBtn').length) {
+                                $toast.delegate('#surpriseBtn', 'click', function() {
+                                    alert('Surprise! you clicked me. i was toast #' + toastIndex + '. You could perform an action here.');
+                                });
+                            }
+
+                            $('#clearlasttoast').click(function() {
+                                toastr.clear($toastlast);
+                            });
+                        });
+                $('#cleartoasts').click(function() {
+                    toastr.clear();
+                });
+
+            }
+
+        };
+
+    }();
+
+    jQuery(document).ready(function() {
+        UIToastr.init();
+    });
+</script>

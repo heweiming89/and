@@ -1,0 +1,30 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+	<h1>thymeleaf</h1>
+	<span th:text="${text ?: _}">lorem4</span>
+	<br />
+	<span th:text="${{#dates.createNow()}}"></span>
+	<span th:text="${#dates.createNow()}"></span>
+	<h4>Person</h4>
+	<table class="table">
+		<tbody th:remove="all-but-first">
+			<tr th:each="person : ${personList}">
+				<td th:text="*{person.name}"></td>
+				<td th:text="*{person.age}"></td>
+				<td th:text="*{#numbers.formatCurrency(person.salary)}"></td>
+				<td
+					th:text="*{#calendars.format(person.birthday,'yyyy-MM-dd HH:mm:ss')}"></td>
+			</tr>
+		</tbody>
+	</table>
+	<h4>Person</h4>
+	<form class="form-horizontal" action="#" th:object="${person}">
+		<span></span> <input class="form-control"
+			th:attr="name=name,value=*{name}" th:classappend="aa" />
+		<!-- 		<input class="form-control" type="text" th:field="*{name}" readonly="readonly" /> -->
+		<!-- 		<input class="form-control" type="text" th:field="*{age}" readonly="readonly" /> -->
+		<!-- 		<input class="form-control" type="text" th:field="*{{salary}}" readonly="readonly" /> -->
+		<!-- 		<input class="form-control" type="text" th:field="*{{birthday}}" readonly="readonly" /> -->
+	</form>
+	<!-- 	<span th:with="#arr" th:text="#aggregates.avg(1,2,4)"></span>	 -->
+
+</th:block>

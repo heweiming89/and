@@ -1,0 +1,28 @@
+<th:block th:fragment="frag(links,content,scripts)"
+	xmlns:th="http://www.thymeleaf.org">
+
+	<h4>link01</h4>
+	<h4>link02</h4>
+	<h4>link03</h4>
+	<h4>link04</h4>
+	<h4>link05</h4>
+
+	<th:block th:replace="${links}"></th:block>
+
+	<h4>content01</h4>
+	<h4>content02</h4>
+	<h4>content03</h4>
+	<h4>content04</h4>
+	<h4>content05</h4>
+
+	<th:block th:replace="${content}"></th:block>
+
+	<h4>scripts01</h4>
+	<h4>scripts02</h4>
+	<h4>scripts03</h4>
+	<h4>scripts04</h4>
+	<h4>scripts05</h4>
+
+	<th:block th:replace="${scripts}"></th:block>
+
+</th:block>
