@@ -1,0 +1,9 @@
+server:
+  port: 2233
+spring:
+  application:
+    name: and-rs
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/

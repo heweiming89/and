@@ -13,7 +13,6 @@ import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.scheduling.annotation.AsyncConfigurer;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -38,10 +37,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableAsync
 @EnableScheduling
 public class SpringContextConfig implements AsyncConfigurer, TransactionManagementConfigurer {
-
-	@SuppressWarnings("unused")
-	@Autowired
-	private Environment env;
 
 	@Autowired
 	private DataSource dataSource;

@@ -14,13 +14,12 @@ spring:
     type: org.apache.commons.dbcp2.BasicDataSource
   activiti:
     process-definition-location-prefix: classpath*:/processes/
+  mvc:
+    favicon:
+      enabled: true
 mybatis:
   config-location: classpath:/config/mybatis-config.xml
   mapper-locations:
   - classpath:/mapper/*.xml
 flyway:
   enabled: false
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:1111/eureka/

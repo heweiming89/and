@@ -7,13 +7,11 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.core.env.Environment;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -43,10 +41,6 @@ import com.fasterxml.jackson.databind.deser.std.NumberDeserializers.BigDecimalDe
 		@Filter(type = FilterType.ANNOTATION, value = ControllerAdvice.class) })
 public class WebContextConfig extends WebMvcConfigurerAdapter {
 
-	@SuppressWarnings("unused")
-	@Autowired
-	private Environment env;
-
 	@Bean /* 文件上传配置 */
 	public MultipartResolver multipartResolver() {
 		StandardServletMultipartResolver multipartResolver = new StandardServletMultipartResolver();
@@ -74,7 +68,7 @@ public class WebContextConfig extends WebMvcConfigurerAdapter {
 		Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder();
 		builder.indentOutput(true)//
 				// .modulesToInstall(new ParameterNamesModule())//
-				.dateFormat(new SimpleDateFormat("yyyy-MM-dd"));
+				.dateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
 		// builder.serializationInclusion(JsonInclude.Include.NON_NULL);
 
 		Map<Class<?>, JsonDeserializer<?>> deserializers = new LinkedHashMap<>();

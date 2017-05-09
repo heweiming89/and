@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "UTF-8"; 
 
 .datepicker .active, .datepicker .active:hover, .datepicker .selected,
 	.datepicker .today {
@@ -799,22 +799,10 @@ keyframes am-moving-dashes { 100%{
 
 100%{
 stroke-opacity
-
-
 :
-
-
-0;
-stroke-width
-
-
+0;stroke-width
 :
-
-
-50
-px
-
-
+50px
 }
 }
 @
@@ -825,22 +813,10 @@ keyframes am-pulsating { 0%{
 
 100%{
 stroke-opacity
-
-
 :
-
-
-0;
-stroke-width
-
-
+0;stroke-width
 :
-
-
-50
-px
-
-
+50px
 }
 }
 .amcharts-graph-column-front {
@@ -872,11 +848,7 @@ px
 
 100%{
 stroke-dashoffset
-
-
 :
-
-
 0
 }
 }
@@ -887,11 +859,7 @@ keyframes am-draw { 0%{
 
 100%{
 stroke-dashoffset
-
-
 :
-
-
 0
 }
 }
@@ -1352,8 +1320,8 @@ table.dataTable>tbody>tr.child ul li {
 
 @
 -moz-document url-prefix (){ .portlet-datatable .dataTables_wrapper
-	.table-responsive {
-	padding: 02px !important
+	.table-responsive{padding:02px!important
+	
 }
 
 }
